@@ -18,7 +18,15 @@ export function Profile({ name, location, date, text, likes, comments }: Props) 
         <Image
           width={60}
           height={60}
-          src={name === 'ProfJunior' ? '/profjunior.png' : '/ufmg.png'}
+          src={
+            name === 'ProfJunior'
+              ? '/profjunior.png'
+              : name === 'UFU'
+                ? '/ufu_logo.png'
+                : name === 'Unitri'
+                  ? '/unitri_logo.png'
+                  : '/ufmg.png'
+          }
           alt="Logo"
         />
         <Flex direction="column" p="sm">
